@@ -36,7 +36,7 @@ PDF      <- file.path(ANNOT_FIG, "apical_consensus_report_2annotate.pdf")
 SIDECAR  <- file.path(CACHE_DIR, "organoid_island_label_positions_centroid.rds")
 CONSENSUS_CSV <- file.path(ANNOT_RES, "apical_consensus_per_organoid.csv")   # from 03_apical_consensus.R
 ANNOT_PY     <- file.path(PROJECT_ROOT, "py", "extract_pdf_annots.py")
-ANNOT_PY_BIN <- "C:/Users/bened/.virtualenvs/r-reticulate/Scripts/python.exe"
+ANNOT_PY_BIN <- Sys.getenv("MSI_PYTHON", "python")
 ACCEPT_TYPES <- c("/FreeText", "/Text", "/Square", "/Circle", "/Highlight",
                   "/StrikeOut", "/Underline", "/Squiggly")
 MATCH_RADIUS_PT    <- 60

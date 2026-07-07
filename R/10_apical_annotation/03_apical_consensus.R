@@ -46,7 +46,7 @@ PDF_ORIG <- file.path(ANNOT_FIG, "organoid_island_cleanup.pdf")
 PDF_JM   <- file.path(ANNOT_FIG, "organoid_island_cleanup_INOUT_JM_0623.pdf")
 SIDECAR  <- file.path(CACHE_DIR, "organoid_island_label_positions_centroid.rds")
 ANNOT_PY     <- file.path(PROJECT_ROOT, "py", "extract_pdf_annots.py")
-ANNOT_PY_BIN <- "C:/Users/bened/.virtualenvs/r-reticulate/Scripts/python.exe"
+ANNOT_PY_BIN <- Sys.getenv("MSI_PYTHON", "python")
 ACCEPT_TYPES <- c("/FreeText", "/Text", "/Square", "/Circle", "/Highlight",
                   "/StrikeOut", "/Underline", "/Squiggly", "/Popup")
 MATCH_RADIUS_PT <- 60          # generous: comment-on-body -> centroid (R/42b)

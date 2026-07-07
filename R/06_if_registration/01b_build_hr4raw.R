@@ -4,7 +4,7 @@
 # In : hi-res section .nd2 files (IF_DIR), IF_SLIDES table (if_config.R)
 # Out: cache/register_if/hr4raw_<sid>.rds  (one per section of the slide)
 # Usage: Rscript R/06_if_registration/01b_build_hr4raw.R [slide]   (default sl6b)
-Sys.setenv(JAVA_HOME="C:/Program Files/Java/jre1.8.0_491")
+if (Sys.getenv("JAVA_HOME") == "") Sys.setenv(JAVA_HOME = "C:/Program Files/Java/jre1.8.0_491")
 source(file.path(Sys.getenv("MSI_ROOT","D:/A_Stanford/HelicobacterMSI/01062026_JoyMetabolGrad"),"Analysis_R_Final/R/00_lib/if_config.R"))
 source(file.path(Sys.getenv("MSI_ROOT","D:/A_Stanford/HelicobacterMSI/01062026_JoyMetabolGrad"),"Analysis_R_Final/R/00_lib/lib_register.R"))
 source(file.path(Sys.getenv("MSI_ROOT","D:/A_Stanford/HelicobacterMSI/01062026_JoyMetabolGrad"),"Analysis_R_Final/R/00_lib/lib_register_if.R"))

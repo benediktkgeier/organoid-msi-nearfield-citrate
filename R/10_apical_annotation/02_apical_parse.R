@@ -30,7 +30,7 @@ source(file.path(Sys.getenv("MSI_ROOT","D:/A_Stanford/HelicobacterMSI/01062026_J
 
 MATCH_RADIUS_PT  <- 25
 ANNOT_PY         <- file.path(PROJECT_ROOT, "py", "extract_pdf_annots.py")
-ANNOT_PY_BIN     <- "C:/Users/bened/.virtualenvs/r-reticulate/Scripts/python.exe"
+ANNOT_PY_BIN     <- Sys.getenv("MSI_PYTHON", "python")
 ACCEPT_TYPES     <- c("/FreeText", "/Text", "/Highlight", "/StrikeOut",
                       "/Underline", "/Squiggly", "/Square", "/Circle", "/Popup")
 

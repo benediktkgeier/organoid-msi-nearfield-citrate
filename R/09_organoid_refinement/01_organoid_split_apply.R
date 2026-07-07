@@ -63,7 +63,7 @@ dir.create(ANNOT_FIG, showWarnings = FALSE, recursive = TRUE)
 dir.create(ANNOT_RES, showWarnings = FALSE, recursive = TRUE)
 
 ANNOT_PY     <- file.path(PROJECT_ROOT, "py", "extract_pdf_lines.py")
-ANNOT_PY_BIN <- "C:/Users/bened/.virtualenvs/r-reticulate/Scripts/python.exe"
+ANNOT_PY_BIN <- Sys.getenv("MSI_PYTHON", "python")
 STORE_RDS    <- file.path(CACHE_DIR, "organoid_split_strokes.rds")
 DROPPED_RDS  <- file.path(CACHE_DIR, "organoid_split_dropped.rds")  # keys to NEVER re-add
 SIDECAR_RDS  <- file.path(CACHE_DIR, "organoid_apical_label_positions.rds")

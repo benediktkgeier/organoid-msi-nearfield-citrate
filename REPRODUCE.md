@@ -136,12 +136,14 @@ echo 'MSI_ROOT=/data/JoyMetabolGrad' >> ~/.Renviron
 Leave `MSI_ROOT` unset to use the reference-machine default. (Verify: `Rscript -e
 'source("R/00_lib/lib_paths.R"); cat(PROJECT_ROOT, CACHE_SRC)'` should print your root.)
 
-Two paths are **outside** `MSI_ROOT` (different drives), handled separately:
-- **Java** — see §3.3.
-- Optional/`file.exists`-guarded, Mode-B-only extras: `ION_LIB`
-  (`D:/R/Projects/BIG_MSI/.../lib_ion_image.R`, external QC helper; falls back to a built-in renderer)
-  and the Python interpreter for the Phase-09/10 parse steps (`ANNOT_PY_BIN`). Neither is needed for
-  Mode A or Phase 11. Edit those literals directly if you use them.
+A few paths are **outside** `MSI_ROOT`, each with its own env override:
+- **Java** (`JAVA_HOME`) — see §3.3. Set it to your Java 8 JRE; the reference default is only
+  applied when `JAVA_HOME` is unset.
+- **Python** for the Phase-09/10 parse steps: `ANNOT_PY_BIN <- Sys.getenv("MSI_PYTHON", "python")`.
+  Set `MSI_PYTHON` to your interpreter if `python` on `PATH` is not the right one. Mode-B only —
+  not needed for Mode A or Phase 11.
+- **`ION_LIB`** — an optional external QC helper (`file.exists`-guarded; falls back to a built-in
+  renderer if absent). Edit the literal in `R/01_preprocess/01_preprocess.R` if you have it.
 
 ### 3.3 Java
 `R/00_lib/lib_paths.R` sets `JAVA_HOME=C:/Program Files/Java/jre1.8.0_491` only if that folder exists
@@ -169,7 +171,7 @@ the per-dataset v3 gradient, the **final combined per-dataset report**, a second
 invocation for the GLOBAL-heatmap variant (`08_nearfield_wholeregion.R all globalheat`), the IF pairs
 report, and the **methods/pipeline report** (`figures/methods_report/generate_methods_report.R` →
 `figures/methods_report/methods_pipeline_report.pdf`; note this generator lives under `figures/`, not
-in the `R/` phase tree). A clean run reports `TOTAL: 12 passed, 0 failed`.
+in the `R/` phase tree). A clean run reports `TOTAL: 14 passed, 0 failed`.
 
 **Outputs may already exist** (a prior copy of every figure/CSV ships in `figures/`/`results/`).
 `run_all.sh` **overwrites** them in place — so a green run is confirmed by the `summary.txt` PASS
@@ -230,9 +232,10 @@ or substitute your own markup to test robustness. The reference artifacts are:
   (two-annotator consensus; the SOLE annotation basis for every Phase-11 figure/stat — no marked-PDF
   re-parse and therefore no Python at Phase-11 runtime).
 
-The parse steps that originally produced these (Phases 09/10) call a hardcoded Python interpreter
-(`C:/Users/bened/.virtualenvs/r-reticulate/Scripts/python.exe`, helpers in `py/`). You do **not** need
-Python for Mode A or for Phase 11 — only if you re-derive the curation TSVs from fresh marked PDFs.
+The parse steps that originally produced these (Phases 09/10) call a Python interpreter
+(`ANNOT_PY_BIN <- Sys.getenv("MSI_PYTHON", "python")`, helpers in `py/`; set `MSI_PYTHON` to your
+interpreter). You do **not** need Python for Mode A or for Phase 11 — only if you re-derive the
+curation TSVs from fresh marked PDFs.
 
 ---
 
@@ -247,7 +250,7 @@ Python for Mode A or for Phase 11 — only if you re-derive the curation TSVs fr
 - **Final combined report**: `figures/gradient/citrate_gradient_report_final.pdf` (21 pages).
 - **SSC + segmentation**: `figures/ssc/ssc_clustering_segmentation_report.pdf` (front page + 20
   per-dataset pages; tissueness → k4 clusters → on-tissue mask → organoid instances).
-- **Run summary**: `results/_regen_logs/summary.txt` should read `TOTAL: 12 passed, 0 failed`.
+- **Run summary**: `results/_regen_logs/summary.txt` should read `TOTAL: 14 passed, 0 failed`.
 - **Sanity (optional)**: every script should parse and the runner should be shell-clean:
   ```bash
   "/c/Program Files/R/R-4.4.2/bin/Rscript.exe" -e 'ok<-TRUE; for(f in list.files("R",pattern="[.]R$",recursive=TRUE,full.names=TRUE)) tryCatch(parse(f),error=function(e){cat("PARSE FAIL:",f,"\n");ok<<-FALSE}); cat(if(ok)"all parse OK\n" else "PARSE ERRORS\n")'
