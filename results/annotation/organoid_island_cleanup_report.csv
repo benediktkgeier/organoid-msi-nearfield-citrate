@@ -1,0 +1,4 @@
+"sid","group","n_before","n_after","merged","deleted"
+"AO_20h_sl4A_sec1a","20h",16,14,"{2,9,11}->2",""
+"AO_20h_sl4A_sec2a","20h",5,4,"{1,4}->1",""
+"AO_20h_sl4A_sec5b","20h",7,6,"","1"

@@ -1,0 +1,11 @@
+"sid","A","n","n_pairs","mode","rmse_um"
+"AO_20h_sl4b_sec2","sl4A",2,6,"affine",28.1
+"AO_20h_sl4b_sec3","sl4A",3,6,"affine",98.9
+"AO_20h_sl4b_sec4","sl4A",4,6,"affine",221.8
+"AO_20h_sl4b_sec6","sl4A",6,5,"affine",76.2
+"AO_0h_sl6b_sec1","sl6A",1,7,"affine",133.8
+"AO_0h_sl6b_sec2","sl6A",2,5,"affine",57.9
+"AO_0h_sl6b_sec3","sl6A",3,5,"affine",66.6
+"AO_0h_sl6b_sec4","sl6A",4,8,"affine",127.2
+"AO_0h_sl6b_sec5","sl6A",5,6,"affine",108.3
+"AO_0h_sl6b_sec6","sl6A",6,6,"affine",49.2

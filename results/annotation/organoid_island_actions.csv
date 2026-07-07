@@ -1,0 +1,4 @@
+sid,op,ids,note
+AO_20h_sl4A_sec1a,merge,2;9;11,merge island-from-2 with 9 and 11
+AO_20h_sl4A_sec2a,merge,1;4,merge island-from-1 with 4
+AO_20h_sl4A_sec5b,delete,1,remove red island (id1) from 1

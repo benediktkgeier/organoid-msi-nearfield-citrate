@@ -1,0 +1,17 @@
+# Normalize line endings: store text as LF in the repo (checkout can be native).
+* text=auto
+# Shell scripts must stay LF so they run under bash on any platform.
+*.sh text eol=lf
+# Treat known binaries as binary (no EOL munging, no diff noise).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tif binary
+*.tiff binary
+*.pdf binary
+*.pzfx binary
+*.xlsx binary
+*.rds binary
+*.imzML binary
+*.ibd binary
+*.nd2 binary

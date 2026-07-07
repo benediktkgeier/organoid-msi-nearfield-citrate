@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GraphPadPrismFile PrismXMLVersion="5.00">
+  <Created>
+    <OriginalVersion CreatedByProgram="GraphPad Prism" CreatedByVersion="6.0f.254" Login="" DateTime="2026-07-01T07:25:17+00:00"/>
+  </Created>
+  <InfoSequence>
+    <Ref ID="Info0" Selected="1"/>
+  </InfoSequence>
+  <Info ID="Info0">
+    <Title>Project Info 1</Title>
+    <Notes>
+      <Font Color="#000000" Face="Helvetica">NA<BR/></Font>
+    </Notes>
+  </Info>
+  <TableSequence>
+    <Ref ID="Table0" Selected="1"/>
+    <Ref ID="Table1"/>
+    <Ref ID="Table2"/>
+    <Ref ID="Table3"/>
+  </TableSequence>
+  <Table ID="Table0" XFormat="numbers" YFormat="replicates" Replicates="1" TableType="XY" EVFormat="AsteriskAfterNumber">
+    <Title>P6_surf</Title>
+    <XColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>distance_um</Title>
+      <Subcolumn>
+        <d>10</d>
+        <d>20</d>
+        <d>50</d>
+        <d>80</d>
+        <d>160</d>
+        <d>250</d>
+        <d>500</d>
+      </Subcolumn>
+    </XColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Basolateral-out</Title>
+      <Subcolumn>
+        <d>0.736506781605507</d>
+        <d>0.83839171603502</d>
+        <d>0.776298889786986</d>
+        <d>0.67844717424741</d>
+        <d>0.816529848077465</d>
+        <d>0.693518306178496</d>
+        <d>0.742155324657835</d>
+      </Subcolumn>
+    </YColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Apical-out</Title>
+      <Subcolumn>
+        <d>0.225620802459749</d>
+        <d>0.238842052562364</d>
+        <d>0.243659121067681</d>
+        <d>0.203368399727056</d>
+        <d>0.172951641896182</d>
+        <d>0.171971197659023</d>
+        <d>0.218100491718124</d>
+      </Subcolumn>
+    </YColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>DHA-control</Title>
+      <Subcolumn>
+        <d>0.273930085079432</d>
+        <d>0.170900936561302</d>
+        <d>0.109307909438275</d>
+        <d>0.0831876900932905</d>
+        <d>0.069135576792534</d>
+        <d>0.0444482838433176</d>
+        <d>0.0360686836695452</d>
+      </Subcolumn>
+    </YColumn>
+  </Table>
+  <Table ID="Table1" XFormat="numbers" YFormat="replicates" Replicates="1" TableType="XY" EVFormat="AsteriskAfterNumber">
+    <Title>P6_abs</Title>
+    <XColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>distance_um</Title>
+      <Subcolumn>
+        <d>10</d>
+        <d>20</d>
+        <d>50</d>
+        <d>80</d>
+        <d>160</d>
+        <d>250</d>
+        <d>500</d>
+      </Subcolumn>
+    </XColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Basolateral-out</Title>
+      <Subcolumn>
+        <d>1.05351527768179e-05</d>
+        <d>9.76242325138413e-06</d>
+        <d>9.31587773465018e-06</d>
+        <d>8.29551449438039e-06</d>
+        <d>9.14153323836833e-06</d>
+        <d>8.42079407095109e-06</d>
+        <d>8.08338379023656e-06</d>
+      </Subcolumn>
+    </YColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Apical-out</Title>
+      <Subcolumn>
+        <d>1.3674107108658e-05</d>
+        <d>1.53730826319714e-05</d>
+        <d>1.52373666830496e-05</d>
+        <d>1.16160481091804e-05</d>
+        <d>1.05349452848286e-05</d>
+        <d>9.01661594611779e-06</d>
+        <d>8.25449409183008e-06</d>
+      </Subcolumn>
+    </YColumn>
+  </Table>
+  <Table ID="Table2" XFormat="numbers" YFormat="replicates" Replicates="1" TableType="XY" EVFormat="AsteriskAfterNumber">
+    <Title>P6_mtic</Title>
+    <XColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>distance_um</Title>
+      <Subcolumn>
+        <d>10</d>
+        <d>20</d>
+        <d>50</d>
+        <d>80</d>
+        <d>160</d>
+        <d>250</d>
+        <d>500</d>
+      </Subcolumn>
+    </XColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Basolateral-out</Title>
+      <Subcolumn>
+        <d>3.0356601689903e-06</d>
+        <d>4.38250962988589e-06</d>
+        <d>5.1659027150269e-06</d>
+        <d>5.18384477185813e-06</d>
+        <d>6.47287491430918e-06</d>
+        <d>6.15483733096924e-06</d>
+        <d>5.67618341542775e-06</d>
+      </Subcolumn>
+    </YColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Apical-out</Title>
+      <Subcolumn>
+        <d>2.81890484509204e-06</d>
+        <d>4.49101293305582e-06</d>
+        <d>5.424866901919e-06</d>
+        <d>5.48600684892305e-06</d>
+        <d>5.52402477728092e-06</d>
+        <d>5.64322193438171e-06</d>
+        <d>5.51352499175825e-06</d>
+      </Subcolumn>
+    </YColumn>
+  </Table>
+  <Table ID="Table3" XFormat="numbers" YFormat="replicates" Replicates="1" TableType="XY" EVFormat="AsteriskAfterNumber">
+    <Title>P6_citdha</Title>
+    <XColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>distance_um</Title>
+      <Subcolumn>
+        <d>10</d>
+        <d>20</d>
+        <d>50</d>
+        <d>80</d>
+        <d>160</d>
+        <d>250</d>
+        <d>500</d>
+      </Subcolumn>
+    </XColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Basolateral-out</Title>
+      <Subcolumn>
+        <d>9.70965416660489e-07</d>
+        <d>1.03891066578278e-06</d>
+        <d>9.62678803870471e-07</d>
+        <d>8.99111956351136e-07</d>
+        <d>9.11543388175963e-07</d>
+        <d>7.96972026250577e-07</d>
+        <d>7.89450464644094e-07</d>
+      </Subcolumn>
+    </YColumn>
+    <YColumn Width="89" Decimals="2" Subcolumns="1">
+      <Title>Apical-out</Title>
+      <Subcolumn>
+        <d>8.22391853811086e-07</d>
+        <d>8.38505659179546e-07</d>
+        <d>8.62848554828238e-07</d>
+        <d>6.42861662738209e-07</d>
+        <d>6.31924597705015e-07</d>
+        <d>4.92461987817365e-07</d>
+        <d>5.34132469359761e-07</d>
+      </Subcolumn>
+    </YColumn>
+  </Table>
+</GraphPadPrismFile>
