@@ -22,6 +22,7 @@ input) — no marked-PDF re-parse (and no python/reticulate) at runtime.
 | `11_export_gradient_profile.R` | Tabular export of the per-organoid outward gradient profiles. |
 | `12_joy_tables.R` | Curated "Joy_Tables" subset export for the collaborator. |
 | `13_citrate_gradient_report_3class.R` | **Apical-class variant** of `10_` (non-destructive sibling). Overview minis treat "mixed" explicitly: default (`withmixed`) gives mixed its own bold grey trend line (3-group); `nomixed` drops mixed (2-group headline). → `figures/gradient/citrate_gradient_report_{withmixed,nomixed}.pdf`. |
+| `14_citrate_gradient_report_final_msigrid.R` | **MSI-grid-outline variant** of `10_` (non-destructive sibling). Panel 1 additionally overlays the per-instance segmentation outline in native MSI-grid space (`class_outlines(native=FALSE)`), so the un-warped outline shape is directly comparable to the BF-warped outlines in panels 5/6. → `figures/gradient/citrate_gradient_report_final_msigrid.pdf`. Accepts `all`/`test`/`<sid>`. |
 
 ## Inputs
 - `cache/instances_final_<sid>.rds`; citrate cache (`lib_citrate.R`); **`apical_map_consensus.csv`**; native crops (Phase 05).

@@ -167,6 +167,7 @@ upstream). It is the SOLE annotation basis for every report/figure here — no m
 | `11_export_gradient_profile.R` | tabular export of per-organoid outward gradient profiles |
 | `12_joy_tables.R` | curated "Joy_Tables" subset export for the collaborator |
 | `13_citrate_gradient_report_3class.R` | apical-CLASS variant of `10_` (untouched sibling): default → `citrate_gradient_report_withmixed.pdf` (mixed = its own grey trend line, 3-group); `nomixed` arg → `citrate_gradient_report_nomixed.pdf` (2-group, mixed dropped). Both publication options |
+| `14_citrate_gradient_report_final_msigrid.R` | MSI-grid-outline variant of `10_`: panel 1 also overlays the per-instance segmentation outline in native MSI-grid space (`class_outlines(native=FALSE)`, class-coloured) so the un-warped shape is comparable to the BF-warped outlines in panels 5/6 → `citrate_gradient_report_final_msigrid.pdf` |
 
 Headline: `figures/annotation/apical_citrate_dha_report.pdf` (page 1 = Summary Statement) +
 `results/annotation/apical_citrate_dha_stats.csv` — the consensus source of the near-field claim
