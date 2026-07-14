@@ -20,11 +20,18 @@ the manual-gate reference choices, and result tables). The heavy artifacts — t
 `register*/`, `imzml/`), the **raw** imzML/`.nd2`, and the rendered **figures** — are archived in a
 separate data deposit and are **`.gitignore`d** from the repo.
 
-> **📦 Data deposit: _link to be added_** (Zenodo/figshare DOI). Download and place the `cache/`
-> tree at `<MSI_ROOT>/Analysis_R/cache` (see §2–§3); the raw `.nd2` and figure crops go under
-> `<MSI_ROOT>/` per the §2 layout.
+> **🔬 MSI datasets (imzML) → METASPACE:**
+> **https://metaspace2020.org/project/McKenna-2026?tab=datasets** — the section datasets (plus the
+> citrate-standard dilution series) with their METASPACE annotations. Download the imzML/`.ibd` here for
+> the raw MSI layer (`imzml/` in the §2 layout).
+>
+> **📦 Cache + microscopy + figures deposit: _link to be added_** (Zenodo/figshare DOI) — the
+> intermediate `cache/` tree (the Mode-A dependency), the raw `.nd2` microscopy, and the rendered
+> **figures**. Place the `cache/` tree at `<MSI_ROOT>/Analysis_R/cache` (see §2–§3); the `.nd2` and
+> figure crops go under `<MSI_ROOT>/` per the §2 layout.
 
-*(This placeholder will be updated with the DOI/links once the deposit is published.)*
+*(The MSI imzML are available on METASPACE now; the Zenodo/figshare placeholder will be filled with the
+DOI once that cache/microscopy/figures deposit is published.)*
 
 ---
 
@@ -102,6 +109,8 @@ The pipeline reads raw acquisitions and a set of intermediate caches. Provide th
   Bruker `.d`/TDF acquisitions — TIMSCONVERT produced broken files, so SCiLS re-export is the clean
   source; see the `notes` column of `inventory.csv`). The Bruker `.d` raw is **not** used by any
   script. If you upload Bruker raw for archival, that's fine, but the runnable input is the imzML+ibd.
+  These imzML datasets are published on **METASPACE**:
+  <https://metaspace2020.org/project/McKenna-2026?tab=datasets>.
 - **Microscopy**: native **Nikon `.nd2`** (NIS-Elements) for both brightfield and IF, read directly
   via `RBioFormats`/Bio-Formats (`read.image`/`read.metadata`, series 1) — no conversion needed.
   IF channel order and per-slide display LUTs are locked in `R/00_lib/if_config.R`

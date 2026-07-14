@@ -16,8 +16,10 @@ figure layer. It is organized as a numbered, reproducible pipeline under `R/`; s
 > layout, run modes, validation) with the exact version pin in
 > **[`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md)**.
 >
-> **Data availability:** this repo is code + docs + small inputs; the cache, raw data, and rendered
-> figures live in a separate data deposit — **link to be added** (see [`REPRODUCE.md`](REPRODUCE.md#data-availability)).
+> **Data availability:** the **MSI datasets (imzML)** are on METASPACE —
+> **[McKenna-2026 project](https://metaspace2020.org/project/McKenna-2026?tab=datasets)**. This repo is
+> code + docs + small inputs; the intermediate cache, `.nd2` microscopy, and rendered figures live in a
+> separate data deposit — link to be added (see [`REPRODUCE.md`](REPRODUCE.md#data-availability)).
 
 ## Environment (locked)
 
