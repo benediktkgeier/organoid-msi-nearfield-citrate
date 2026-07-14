@@ -25,13 +25,17 @@ separate data deposit and are **`.gitignore`d** from the repo.
 > citrate-standard dilution series) with their METASPACE annotations. Download the imzML/`.ibd` here for
 > the raw MSI layer (`imzml/` in the §2 layout).
 >
-> **📦 Cache + microscopy + figures deposit: _link to be added_** (Zenodo/figshare DOI) — the
-> intermediate `cache/` tree (the Mode-A dependency), the raw `.nd2` microscopy, and the rendered
-> **figures**. Place the `cache/` tree at `<MSI_ROOT>/Analysis_R/cache` (see §2–§3); the `.nd2` and
-> figure crops go under `<MSI_ROOT>/` per the §2 layout.
+> **🔬 Microscopy (`.nd2`) + Bruker MSI raw (`.d`) → figshare:**
+> **https://doi.org/10.6084/m9.figshare.32979014** — the native Nikon `.nd2` brightfield/IF microscopy
+> and the archival Bruker `.d`/TDF acquisitions. Place the `.nd2` (and `_over.nd2`) under `<MSI_ROOT>/`
+> per the §2 layout. (The runnable MSI input is the METASPACE imzML above, **not** the Bruker `.d`.)
+>
+> **📦 Intermediate cache + rendered figures: _link to be added_** — the validated `cache/` tree (the
+> Mode-A dependency) and the figure PDFs. Place the `cache/` tree at `<MSI_ROOT>/Analysis_R/cache`
+> (see §2–§3). Not yet deposited; **Mode B** can rebuild the cache from the raw imzML above.
 
-*(The MSI imzML are available on METASPACE now; the Zenodo/figshare placeholder will be filled with the
-DOI once that cache/microscopy/figures deposit is published.)*
+*(MSI imzML on METASPACE and microscopy/Bruker-raw on figshare are available now; the cache/figures
+deposit placeholder will be filled with a DOI once published.)*
 
 ---
 
@@ -108,13 +112,14 @@ The pipeline reads raw acquisitions and a set of intermediate caches. Provide th
 - **MSI**: the pipeline consumes **already-converted centroid imzML** (SCiLS-Lab re-export of the
   Bruker `.d`/TDF acquisitions — TIMSCONVERT produced broken files, so SCiLS re-export is the clean
   source; see the `notes` column of `inventory.csv`). The Bruker `.d` raw is **not** used by any
-  script. If you upload Bruker raw for archival, that's fine, but the runnable input is the imzML+ibd.
-  These imzML datasets are published on **METASPACE**:
-  <https://metaspace2020.org/project/McKenna-2026?tab=datasets>.
+  script; the runnable input is the imzML+ibd. These imzML datasets are published on **METASPACE**
+  (<https://metaspace2020.org/project/McKenna-2026?tab=datasets>), and the archival Bruker `.d`/TDF raw
+  is on **figshare** (<https://doi.org/10.6084/m9.figshare.32979014>).
 - **Microscopy**: native **Nikon `.nd2`** (NIS-Elements) for both brightfield and IF, read directly
   via `RBioFormats`/Bio-Formats (`read.image`/`read.metadata`, series 1) — no conversion needed.
   IF channel order and per-slide display LUTs are locked in `R/00_lib/if_config.R`
-  (`ch1=Cy5/F-actin, ch2=mCherry/ZO-1, ch3=FITC/β-catenin, ch4=DAPI`).
+  (`ch1=Cy5/F-actin, ch2=mCherry/ZO-1, ch3=FITC/β-catenin, ch4=DAPI`). The `.nd2` files are on
+  **figshare**: <https://doi.org/10.6084/m9.figshare.32979014>.
 - **Citrate standard**: a Sodium-Citrate dilution series imzML (matrix-matched, same slide sl7A).
   The decade concentrations were mislabeled at acquisition and physically renamed to the TRUE
   concentration (`MSI/.../imzml/RENAME_LOG.txt`; `R/02_CitrateStandard/00_config.R` maps each file).
